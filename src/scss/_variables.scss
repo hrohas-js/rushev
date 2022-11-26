@@ -1,0 +1,130 @@
+@function prc($pxOne, $pxTwo) {
+	$result: ($pxOne / $pxTwo) * 100%;
+	@return $result;
+}
+
+@function rem($px) {
+	$result: ($px / 16) + rem;
+	@return $result;
+}
+
+@function em($px, $insize) {
+	$result: ($px / $insize) + em;
+	@return $result;
+}
+@mixin button($border,$color,$fs,$bgc,$paddings) {
+	text-align: center;
+	text-transform: uppercase;
+	border:$border;
+	color:white;
+	background-color:$bgc;
+	padding: $paddings 0;
+}
+//!!!FONT-SIZES!!!//
+// font-size для меню на странице конструктора и каталогах:
+$fs-menu: rem(17.3812);
+// font-size для названия продукта и элементов menu header footer:
+$fs-product-item-text:rem(12);
+//font-size для формы в Footer:
+$fs-form-tems:rem(10);
+// font-size для всех кнопок на сайте кроме формы новостной рассылки:
+$fs-action-button:rem(8);
+// font-size для названия товара в карсточке товара:
+$fs-good-name:rem(18);
+// font-size для цены товара в карточке товара:
+$fs-good-cost:rem(13);
+// font-size для выбора цвета и размера изделия в карточке товаров:
+$fs-good-choose-action:rem(12);
+// font-size для выбора вкладок "про товар" в карточке товаров:
+$fs-good-about-product:rem(10);
+// font-size для текста описания сертификата:
+$fs-certificate-description:rem(13);
+// font-size для текста описания то вара:
+$fs-certificate-description:rem(12);
+// font-size для всех загаловков в wish-list:
+$fs-wish-list-title:rem(13.3005);
+// font-size для размеров изделия и цены в wish-list и корзине:
+$fs-wish-card-cost-item:rem(9.97538);
+// font-size для суммы заказа в корзине:
+$fs-cart-cost:rem(14);
+// font-size для описания доставке в корзине:
+$fs-cart-delivery-description:rem(10.5);
+// font-size для checkbox label
+$fs-checkbox-label:rem(8);
+// font-size для элементов "бургер" меню;
+$fs-menu-burger-item-text:rem(15);
+// font-size для всего раздела about-us
+$fs-about-us:rem(16);
+// font-size для cыылок только на страницах с описанием кроме страницы адреса:
+$fs-about-us-href:rem(17);
+
+//!!!LINE-HEIGHT!!!//
+//Текст описания сертификата
+$lh-sert-description: rem(15);
+//Текст из разделов футера
+$lh-footer-section-text: rem(20);
+//Текст описания товара
+$lh-product-description: rem(14);
+
+//!!!PADDING-MARGIN-GAP!!!(pup-верхний и нижний падинг, pside-боковые падинги)//
+//Buttons кроме рассылки
+$pup-action-button: rem(12);
+//Buttons рассылка
+$pup-action-button-news: rem(16);
+//Header
+$pup-header: rem(25);
+$pside-header: rem(38);
+//Мини каталорг на главной странице
+$pup-main-mini-goods: rem(80);
+$pside-main-mini-goods: rem(120);
+$mtop-product-title: rem(21);
+$column-gap-main-mini-goods: rem(60);
+$row-gap-main-mini-goods: rem(54);
+//Футер
+$pbottom-footer: rem(50);
+$pside-footer: rem(50);
+$mbottom-footer-menu-item: rem(25);
+//Галерея на странице каталога
+$pside-catalog-gallery: rem(230);
+$mtop-catalog-gallery: rem(123);
+$mbottom-catalog-gallery: rem(360);
+$column-gap-catalog-gallery: rem(50);
+$row-gap-catalog-gallery: rem(37);
+//Меню на странице каталога
+$mtop-menu-catalog: rem(125);
+$mbottom-menu-catalog: rem(106); 
+//??Страница товара
+//Описание товара
+$ptop-good-description: rem(64);
+$pside-good-description: rem(20);
+//Блок аналоги на странице товара
+$pside-analog-products: rem(120);
+$ptop-analog-products: rem(55);
+$pbottom-analog-products: rem(235);
+//Заголовок вариации
+$mbottom-variation-title: rem(12);
+//Блок "Об изделии"
+$mtop-about-product: rem(38);
+//??Whishlist
+//Основная таблица
+$mtop-table-whishlist: rem(71);
+$mbottom-table-whishlist: rem(260);
+//Строка основной таблицы
+$pup-row-table-whishlist: rem(14);
+//Название товара
+$mbottom-whishlist-product-title: rem(62);
+//??Корзина
+//Основная таблица
+$pleft-table-cart: rem(48);
+$pright-table-cart: rem(80);
+//Строка основной таблицы
+$pup-row-table-cart: rem(14);
+//??Меню в разделах футера
+$pleft-about-menu: rem(34);
+$mbottom-about-menu-item: rem(30);
+
+//!!Цвета кнопок
+//синяя кнопка 
+$button-color-blue:#3C84C6;
+//черная кнопка
+$button-color-black:#000000;

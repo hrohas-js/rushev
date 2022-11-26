@@ -7,9 +7,17 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@estudioliver/vue-uuid-v4": "^1.0.0",
+    "axios": "^0.26.1",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
+    "vue-carousel": "^0.18.0",
+    "vue-marquee-text-component": "^2.0.1",
     "vue-router": "^4.0.3",
+    "vue-slick-carousel": "^1.0.6",
+    "vue-webp-image": "^1.0.2",
+    "vue3-carousel": "^0.1.38",
+    "vue3-lazyload": "^0.3.4",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
@@ -18,12 +26,17 @@
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "sass": "^1.32.7",
-    "sass-loader": "^12.0.0"
+    "sass-loader": "^12.0.0",
+    "style-resources-loader": "^1.5.0"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "author": "",
+  "license": "ISC"
 }
