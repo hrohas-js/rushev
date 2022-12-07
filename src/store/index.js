@@ -274,7 +274,7 @@ export default createStore({
                                     body: obj
                                 });
                                 state.cart.forEach(elem => {
-                                    if (elem.product_code === 'RSHV_SERT' && elem.product_features['4'].variant === 'Электронный') {
+                                    if (elem.product_code === 'RSHV_SERT' && elem.variation_name.indexOf('Электронный') !== -1) {
                                         const quantity = parseInt(elem.amount);
                                         for (let i = 1; i <= quantity; i++) {
                                             dispatch('PostRequest', {
