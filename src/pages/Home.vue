@@ -5,7 +5,7 @@
       <slider :sliderConfig="$store.state.slider.images_header" :imageCount="1" />
       <div class="marquee" ref="slider">
         <marquee-text :repeat="10">
-          <span>24.11 — 26.11 BLACK FRIDAY СКИДКА НА ВЕСЬ АССОРТИМЕНТ 20%</span>
+          <span>NEW DROP 2023 / NEW YEAR IS COMING</span>
         </marquee-text>
       </div>
       <div class="home-content">
