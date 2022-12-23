@@ -15,7 +15,7 @@
 export default {
   name: 'App',
   data: () => ({
-    version: '1.5.2'
+    version: '1.5.3'
   }),
   created() {
     if(localStorage.getItem('rushev_version') == null || localStorage.getItem('rushev_version') !== this.version) {
@@ -25,7 +25,7 @@ export default {
     }
   },
   mounted() {
-    this.$store.commit('slider/SET_IMG_HEADER', 2);
+    this.$store.commit('slider/SET_IMG_HEADER', 3);
     this.$store.dispatch('GetRequest', 'https://rushev.online/server/products.php');
     let isMobile = /iPad|iPhone|iPod/.test(navigator.platform)
         || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) || navigator.platform === 'Linux aarch64';

@@ -8,7 +8,7 @@ export const slider = {
     ,
     getters: {},
     mutations: {
-        SET_IMG_HEADER(state,count){
+        SET_IMG_HEADER(state, count){
             for (let i = 1; i <= count; i++){
                 state.images_header.push({
                     src: `https://u1600792.isp.regruhosting.ru/img_server/images_header/images_header${i}.webp`,

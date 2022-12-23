@@ -255,8 +255,8 @@ export default createStore({
                         commit('SET_COUPON_VALUE', response.data);
                         commit('SET_SERT');
                     }
-                    if (postData.url === 'https://rushev.online/server/payment.php') {
-                    //if (postData.url === 'https://rushev.online/server/payment_test.php') {
+                    //if (postData.url === 'https://rushev.online/server/payment.php') {
+                    if (postData.url === 'https://rushev.online/server/payment_test.php') {
                         console.log(response)
                         localStorage.setItem('rushev_paymentID', response.data.id)
                         window.open(response.data.confirmation.confirmation_url, "_self");
@@ -264,8 +264,8 @@ export default createStore({
                     if (postData.url === 'https://rushev.online/server/subscribe.php') {
                         commit('CHANGE_SUBSCRIBED', response.data);
                     }
-                    if (postData.url === 'https://rushev.online/server/payment_confirm.php') {
-                    //if (postData.url === 'https://rushev.online/server/payment_confirm_test.php') {
+                    //if (postData.url === 'https://rushev.online/server/payment_confirm.php') {
+                    if (postData.url === 'https://rushev.online/server/payment_confirm_test.php') {
                         if(response.data.status === 'waiting_for_capture' || response.data.status === 'succeeded') {
                             if(localStorage.getItem('rushev_order') !== null) {
                                 const obj = JSON.parse(localStorage.getItem('rushev_order'));

@@ -32,8 +32,8 @@ export default {
   mounted() {
     if (localStorage.getItem('rushev_paymentID') != null) {
       this.$store.dispatch('PostRequest', {
-        url: 'https://rushev.online/server/payment_confirm.php',
-        //url: 'https://rushev.online/server/payment_confirm_test.php',
+        //url: 'https://rushev.online/server/payment_confirm.php',
+        url: 'https://rushev.online/server/payment_confirm_test.php',
         body: localStorage.getItem('rushev_paymentID')
       });
     } else if (localStorage.getItem('rushev_order') != null) {

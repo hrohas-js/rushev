@@ -514,8 +514,8 @@ export default {
             });
           } else {
             this.$store.dispatch('PostRequest', {
-              url: 'https://rushev.online/server/payment.php',
-              //url: 'https://rushev.online/server/payment_test.php',
+              //url: 'https://rushev.online/server/payment.php',
+              url: 'https://rushev.online/server/payment_test.php',
               body: {
                 sum: this.totalSum,
                 info: ';' + this.$store.state.delivery.name + ' ' + this.$store.state.delivery.surname + ' ' + this.$store.state.delivery.email + ' ' + this.$store.state.delivery.phone
