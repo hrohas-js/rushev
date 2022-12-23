@@ -23,16 +23,16 @@ export const menuStore = {
         ],
         menuItemDown: [
             {
+                id: 4,
+                text: 'КАФФЫ',
+                name: 'kaffs',
+                linkpath: '/catalog/kaffs'
+            },
+            {
                 id: 5,
                 text: 'КОНСТРУКТОР',
                 name: 'constructor',
                 linkpath: '/catalog/constructor'
-            },
-            {
-                id: 4,
-                text: 'PACIFIC',
-                name: 'PACIFIC',
-                linkpath: '/catalog/PACIFIC'
             },
             {
                 id: 6,

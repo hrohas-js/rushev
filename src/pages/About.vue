@@ -1,8 +1,11 @@
 <template>
   <div class="about-container">
     <MyHeader />
-    <main :style="{marginTop : this.$store.state.slider.header_height + 'px'}">
-      <div class="main__container">
+    <main :style="{marginTop : $store.state.slider.header_height + 'px'}">
+      <div
+          :class="{'_gap':$route.params.aboutRouter === 'where'}"
+          class="main__container"
+      >
         <about-menu />
         <div class="about__content" v-if="$store.state.display_width >= 768">
           <maker v-if="$route.params.aboutRouter === 'aboutUs'" />
@@ -57,6 +60,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+._gap{
+  gap: rem(30);
+}
 main {
   padding: 0 $pside-header;
   margin-bottom: rem(391);
@@ -65,7 +71,7 @@ main {
 .main__container {
   display: flex;
   font-weight: 300;
-  margin-top: rem(70);
+  padding-top: rem(70);
 }
 
 .about__content {
