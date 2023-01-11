@@ -3,8 +3,8 @@
   <div
       v-if="$store.state.curentGood != null"
       class="product"
-      :class="{productSert:$store.state.curentGood.product_code === 'RSHV_SERT'}"
-      :style="{marginTop : this.$store.state.slider.header_height + 'px'}"
+      :class="{productSert: $store.state.curentGood.product_code === 'RSHV_SERT'}"
+      :style="{marginTop: $store.state.slider.header_height + 'px'}"
   >
     <div class="product-content">
       <div
@@ -29,7 +29,9 @@
       >
         <div class="__info__main">
           <div class="name-price">
-            <div class="name">{{ $store.state.curentGood.product }}</div>
+            <div class="name">
+              {{ $store.state.curentGood.product }}
+            </div>
             <div class="price-flex">
               <div
                   v-if="$store.state.curentGood.product_code !== 'RSHV_SERT'"
@@ -39,7 +41,8 @@
               </div>
               <div
                   v-if="$store.state.curentGood.product_code !== 'RSHV_SERT' && $store.state.curentGood.discount"
-                  class="price price_old">
+                  class="price price_old"
+              >
                 {{ basePrice }} ₽
               </div>
             </div>
@@ -463,7 +466,7 @@ img {
 }
 
 .likeFill svg {
-  fill: #1F83DE;
+  fill: #000000;
   stroke: none;
 }
 

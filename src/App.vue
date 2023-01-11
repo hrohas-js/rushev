@@ -15,7 +15,7 @@
 export default {
   name: 'App',
   data: () => ({
-    version: '1.5.6'
+    version: '1.6.0'
   }),
   created() {
     if(localStorage.getItem('rushev_version') == null || localStorage.getItem('rushev_version') !== this.version) {

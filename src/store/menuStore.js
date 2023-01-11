@@ -30,7 +30,7 @@ export const menuStore = {
             },
             {
                 id: 5,
-                text: 'КОНСТРУКТОР (в разработке)',
+                text: 'КОНСТРУКТОР',
                 name: 'constructor',
                 linkpath: '/catalog/constructor'
             },

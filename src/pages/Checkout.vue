@@ -505,20 +505,22 @@ export default {
         if (this.totalSum > 0) {
           if (this.deliveryChooseID === '15') {
             this.$store.dispatch('PostRequest', {
-              //url: 'https://rushev.online/server/payment.php',
-              url: 'https://rushev.online/server/payment_test.php',
+              url: 'https://rushev.online/server/payment.php',
+              //url: 'https://rushev.online/server/payment_test.php',
               body: {
                 sum: 500,
-                info: ';' + this.$store.state.delivery.name + ' ' + this.$store.state.delivery.surname + ' ' + this.$store.state.delivery.email + ' ' + this.$store.state.delivery.phone
+                info: ';' + this.$store.state.delivery.name + ' ' + this.$store.state.delivery.surname + ' ' + this.$store.state.delivery.email + ' ' + this.$store.state.delivery.phone,
+                order: obj
               }
             });
           } else {
             this.$store.dispatch('PostRequest', {
-              //url: 'https://rushev.online/server/payment.php',
-              url: 'https://rushev.online/server/payment_test.php',
+              url: 'https://rushev.online/server/payment.php',
+              //url: 'https://rushev.online/server/payment_test.php',
               body: {
                 sum: this.totalSum,
-                info: ';' + this.$store.state.delivery.name + ' ' + this.$store.state.delivery.surname + ' ' + this.$store.state.delivery.email + ' ' + this.$store.state.delivery.phone
+                info: ';' + this.$store.state.delivery.name + ' ' + this.$store.state.delivery.surname + ' ' + this.$store.state.delivery.email + ' ' + this.$store.state.delivery.phone,
+                order: obj
               }
             });
           }
