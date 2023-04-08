@@ -29,7 +29,7 @@
         </h2>
         <p>
           <a href="https://rushev.online">rushev.online</a>
-          или написав нам на почту: <a href="mailto:rushevshop@gmail.com">rushevshop@gmail.com</a>
+          или написав нам на почту: <a href="mailto:rushev.online@gmail.com">rushev.online@gmail.com</a>
         </p>
         <p>
           Срок годности и службы товара не ограничен.

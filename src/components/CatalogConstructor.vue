@@ -14,23 +14,27 @@
             alt="Конструктор"
         />
       </div>
-      <goods-item :good="custom[1]"/>
+      <goods-item :good="custom[2]"/>
     </div>
     <div class="const-header">
       ХУПЫ
     </div>
     <div class="catalog-constructor">
-      <goods-item :good="hoops[2]"/>
-      <goods-item :good="hoops[3]"/>
       <goods-item :good="hoops[4]"/>
-      <goods-item :good="hoops[0]"/>
+      <goods-item :good="hoops[5]"/>
+      <goods-item :good="hoops[6]"/>
+      <goods-item :good="hoops[2]"/>
       <div class="const-banner">
         <img
             src="https://u1600792.isp.regruhosting.ru/img_server/const_catalog/const_catalog2.jpg"
             alt="Конструктор"
         />
       </div>
+      <goods-item :good="hoops[3]"/>
+      <goods-item :good="hoops[0]"/>
       <goods-item :good="hoops[1]"/>
+      <goods-item :good="hoops[7]"/>
+      <goods-item :good="hoops[8]"/>
     </div>
     <div class="const-header">
       ТРИНКЕТЫ
@@ -48,11 +52,11 @@
     </div>
     <div class="catalog-constructor">
       <goods-item :good="custom[0]"/>
-      <goods-item :good="custom[1]"/>
+      <goods-item :good="custom[2]"/>
     </div>
     <div class="const-banner">
       <img
-          src="https://u1600792.isp.regruhosting.ru/img_server/const_catalog/const_catalog1.jpg"
+          src="https://u1600792.isp.regruhosting.ru/img_server/const_catalog/const_catalog1mob.png"
           alt="Конструктор"
       />
     </div>
@@ -60,19 +64,23 @@
       ХУПЫ
     </div>
     <div class="catalog-constructor">
-      <goods-item :good="hoops[2]"/>
-      <goods-item :good="hoops[3]"/>
+      <goods-item :good="hoops[4]"/>
+      <goods-item :good="hoops[5]"/>
     </div>
-    <goods-item :good="hoops[4]"/>
+    <goods-item :good="hoops[6]"/>
     <div class="const-banner">
       <img
-          src="https://u1600792.isp.regruhosting.ru/img_server/const_catalog/const_catalog2.jpg"
+          src="https://u1600792.isp.regruhosting.ru/img_server/const_catalog/const_catalog2mob.png"
           alt="Конструктор"
       />
     </div>
     <div class="catalog-constructor">
+      <goods-item :good="hoops[2]"/>
+      <goods-item :good="hoops[3]"/>
       <goods-item :good="hoops[0]"/>
       <goods-item :good="hoops[1]"/>
+      <goods-item :good="hoops[7]"/>
+      <goods-item :good="hoops[8]"/>
     </div>
     <div class="const-header">
       ТРИНКЕТЫ

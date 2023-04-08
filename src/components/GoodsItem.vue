@@ -28,7 +28,7 @@
               stroke="#1E1E1C" stroke-miterlimit="10"/>
         </svg>
       </div>
-      <div v-if="good.amount === 0" class="preorder">
+      <div v-if="good.amount === '0'" class="preorder">
         предзаказ
       </div>
       <div v-if="basePrice !== price" class="sale sale_title">

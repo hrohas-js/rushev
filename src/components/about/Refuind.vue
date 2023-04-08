@@ -35,7 +35,7 @@
           Контакты для связи с магазином по вопросам обмена или возврата товаров:
         </h2>
         <p>
-          Email: <a href="mailto:rushevshop@gmail.com">rushevshop@gmail.com</a>
+          Email: <a href="mailto:rushev.online@gmail.com">rushev.online@gmail.com</a>
         </p>
         <p>
           Телефон: <a href="tel:+79066345690">+7 906 634 56 90</a>

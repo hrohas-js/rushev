@@ -4,7 +4,9 @@
       <img src="@/assets/img/preload.gif" alt="preload">
     </div>
     <transition name="pop">
-      <div v-if="$store.state.sertSuccess" class="popup success">СЕРТИФИКАТ ПРИМЕНЕН</div>
+      <div v-if="$store.state.sertSuccess" class="popup success">
+        СЕРТИФИКАТ ПРИМЕНЕН
+      </div>
     </transition>
     <router-view></router-view>
   </div>
@@ -15,7 +17,7 @@
 export default {
   name: 'App',
   data: () => ({
-    version: '1.6.0'
+    version: '1.7.3'
   }),
   created() {
     if(localStorage.getItem('rushev_version') == null || localStorage.getItem('rushev_version') !== this.version) {

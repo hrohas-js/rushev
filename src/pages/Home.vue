@@ -3,9 +3,9 @@
     <my-header />
     <main>
       <slider :sliderConfig="$store.state.slider.images_header" :imageCount="1" />
-      <div class="marquee" ref="slider">
+      <div v-if="marquee.length > 0" class="marquee" ref="slider">
         <marquee-text :repeat="10">
-          <span>NEW DROP 2023 / NEW YEAR IS COMING</span>
+          <span>{{ marquee }}</span>
         </marquee-text>
       </div>
       <div class="home-content">
@@ -40,6 +40,9 @@ export default {
     Slider,
     MarqueeText
   },
+  data: () => ({
+    marquee: ''
+  }),
   mounted() {
     this.$store.commit('slider/SET_MAIN_SCROLL', false);
     window.addEventListener('scroll', () => {

@@ -16,7 +16,7 @@
       </p>
       <p>
         E-Mail<br>
-        <a href="mailto:rushevshop@gmail.com" target="_blank">rushevshop@gmail.com</a>
+        <a href="mailto:rushev.online@gmail.com" target="_blank">rushev.online@gmail.com</a>
       </p>
     </div>
   </div>

@@ -72,24 +72,6 @@
                   ₽ 0
                 </div>
               </div>
-              <div v-if="!electroSert" class="__content__item">
-                <div class="__item_basis">
-                  <input
-                      type="radio"
-                      required
-                      id="moscow"
-                      name="deliv"
-                      v-model="deliveryChoose"
-                      :value="cura + '/14'"
-                  />
-                  <label for="moscow">
-                    Доставка курьером по Москве (в пределах МКАДа)
-                  </label>
-                </div>
-                <div class="delivery__price">
-                  ₽ {{ cura }}
-                </div>
-              </div>
               <div v-if="$store.getters.cart_count > 3 && !electroSert" class="__content__item">
                 <div class="__item_basis">
                   <input
@@ -260,9 +242,9 @@
                 {{ $store.state.delivery.address }}
                 <br>
                 <br>
-                {{ $store.state.delivery.direction }} {{ $store.state.delivery.index }} {{
-                  $store.state.delivery.region
-                }}
+                {{ $store.state.delivery.direction }}
+                {{ $store.state.delivery.index }}
+                {{ $store.state.delivery.region }}
               </div>
             </div>
             <div class="checkout-submit" @click="catchOrderInfo">
@@ -503,27 +485,21 @@ export default {
         }
         localStorage.setItem('rushev_order', JSON.stringify(obj));
         if (this.totalSum > 0) {
+          let sum = 0;
           if (this.deliveryChooseID === '15') {
-            this.$store.dispatch('PostRequest', {
-              url: 'https://rushev.online/server/payment.php',
-              //url: 'https://rushev.online/server/payment_test.php',
-              body: {
-                sum: 500,
-                info: ';' + this.$store.state.delivery.name + ' ' + this.$store.state.delivery.surname + ' ' + this.$store.state.delivery.email + ' ' + this.$store.state.delivery.phone,
-                order: obj
-              }
-            });
+            sum = 500;
           } else {
-            this.$store.dispatch('PostRequest', {
-              url: 'https://rushev.online/server/payment.php',
-              //url: 'https://rushev.online/server/payment_test.php',
-              body: {
-                sum: this.totalSum,
-                info: ';' + this.$store.state.delivery.name + ' ' + this.$store.state.delivery.surname + ' ' + this.$store.state.delivery.email + ' ' + this.$store.state.delivery.phone,
-                order: obj
-              }
-            });
+            sum = this.totalSum;
           }
+          this.$store.dispatch('PostRequest', {
+            //url: 'https://rushev.online/server/payment.php',
+            url: 'https://rushev.online/server/payment_test.php',
+            body: {
+              sum: sum,
+              info: ';' + this.$store.state.delivery.name + ' ' + this.$store.state.delivery.surname + ' ' + this.$store.state.delivery.email + ' ' + this.$store.state.delivery.phone,
+              order: obj
+            }
+          });
         } else {
           this.$store.dispatch('PostRequest', {
             url: 'https://rushev.online/server/order.php',

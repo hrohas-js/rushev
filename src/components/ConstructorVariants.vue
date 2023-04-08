@@ -26,7 +26,8 @@
         <input
             type="text"
             class="__metal__input__item"
-            placeholder="Введите имя или инициалы которые хотите добавить в изделие"
+            :placeholder="initialsPlaceholder"
+            @input="checkCountInitials"
             @blur="fetchInitials"
             v-model="initials"
         />
@@ -40,10 +41,15 @@ export default {
   name: 'constructor-variants',
   data: () => ({
     colorChoose: '',
-    initials: ''
+    initials: '',
+    initialsPlaceholder: ''
   }),
   mounted() {
     this.$store.commit('SET_CHECK_OPTIONS', false);
+    this.checkInitials();
+  },
+  updated() {
+    this.checkInitials();
   },
   methods: {
     chooseColor(val) {
@@ -66,12 +72,24 @@ export default {
         }
       }
     },
+    checkCountInitials() {
+      if (this.$store.state.curentGood.product_code === 'RSHV_MONO_NAME_E1' && this.initials.length > 1) {
+        this.initials = this.initials.slice(0, this.initials.length - 1);
+      }
+    },
     fetchInitials() {
       if (this.initials !== '') {
         this.$store.commit('CHANGE_CURRENTGOOD', this.initials);
         if (this.colorChoose !== '') {
           this.$store.commit('SET_CHECK_OPTIONS', true);
         }
+      }
+    },
+    checkInitials() {
+      if (this.$store.state.curentGood.product_code === 'RSHV_MONO_NAME_E1') {
+        this.initialsPlaceholder = 'Введите инициал, который хотите добавить в изделие';
+      } else {
+        this.initialsPlaceholder = 'Введите инициалы, которые хотите добавить в изделие';
       }
     }
   }
